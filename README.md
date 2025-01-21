@@ -1,22 +1,57 @@
-# Clasificación de Reseñas de Películas
-![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey)
-![Estado](https://img.shields.io/badge/Estado-Terminado-brightgreen)
+---
 
-## 📖 Descripción del Proyecto
-El objetivo de este proyecto fue desarrollar un sistema de clasificación automática de reseñas de películas, utilizando un conjunto de datos de reseñas etiquetadas de IMDB. Se probaron múltiples modelos de clasificación para identificar las reseñas negativas y positivas de manera eficiente. Este proyecto se realizo con Tripleten.
+# Clasificación de Reseñas de Películas en Film Junky Union
+
+---
+
+## 🔖 Descripción del Proyecto
+Este proyecto tiene como objetivo desarrollar un modelo que clasifique automáticamente las reseñas de películas como positivas o negativas. Para ello, utilizamos un conjunto de datos de IMDB con textos etiquetados. El modelo es parte del sistema de categoría de reseñas de Film Junky Union, una comunidad para entusiastas de las películas clásicas. Este proyecto se realizo con TripleTen.
+
+---
 
 ## 💻 Funcionalidades
-- `Limpieza y Preprocesamiento de Datos`: Vectorización de textos y transformación de los datos para ser usados en modelos de clasificación.
-- `Entrenamiento de Modelos`: Implementación y evaluación de tres modelos: Regresión Logística, LGBMClassifier y Gradient Boosting.
-- `Evaluación de Rendimiento`: Comparación de los modelos utilizando métricas de F1-score, ROC AUC y APS.
+- **Limpieza y Normalización de Textos:**
+  - Eliminación de caracteres no deseados y normalización de palabras mediante lematización.
+- **Construcción de Representaciones Textuales:**
+  - Uso de TF-IDF para transformar las reseñas en representaciones numéricas.
+- **Modelos Predictivos:**
+  - Implementación de tres modelos principales:
+    - Regresión Logística
+    - Gradient Boosting
+    - LightGBM
+- **Evaluación del Desempeño:**
+  - Métricas como F1-score, ROC AUC y APS para evaluar y comparar los modelos.
 
-## 🛠 Tecnologías Utilizadas
+---
+
+## 🛠️ Tecnologías Utilizadas
 - Python
 - Pandas
+- NumPy 
 - Scikit-learn
 - LightGBM
+- Matplotlib
+- Seaborn
+- SpaCy
+- NLTK
+
+---
+
+## 🔢 Resultados
+- **Mejor Modelo:** Regresión Logística
+  - F1-score en conjunto de prueba: **0.88**.
+  - Valores altos de ROC AUC (0.95) y APS (0.95).
+- Otros modelos (LGBM y Gradient Boosting) también mostraron desempeño competitivo, pero ligeramente inferior a la Regresión Logística.
+
+---
 
 ## ✨ Conclusiones
-- `Eficacia del modelo`: La Regresión Logística destacó por su excelente balance entre precisión y eficiencia, alcanzando un **F1-Score de 0.88** y un **AUC-ROC de 0.95**, lo que lo convierte en una opción confiable para clasificar reseñas.
-- `Comparación de modelos`: Aunque la Regresión Logística fue el modelo más efectivo, otros modelos como el LGBMClassifier y Gradient Boosting también mostraron buenos resultados (F1-Scores de 0.86 y 0.82 respectivamente). Esto sugiere que, dependiendo de los requerimientos específicos (como mayor velocidad o interpretabilidad), estos modelos podrían ser alternativas viables.
-- `Impacto para el negocio`: La implementación de este sistema permitirá identificar rápidamente reseñas negativas y ajustar sus estrategias de contenido y marketing en función del feedback de los usuarios. Esto optimiza la experiencia del usuario y puede ayudar a aumentar la retención y satisfacción de los miembros de la comunidad.
+- **Impacto del Proyecto:**
+  Este modelo permite categorizar automáticamente reseñas de películas, ahorrando tiempo a los administradores de la comunidad y mejorando la experiencia de los usuarios.
+- **Escalabilidad:**
+  Las técnicas utilizadas pueden ampliarse fácilmente para incluir otras categorías de reseñas o tipos de datos.
+- **Valor Comercial:**
+  La clasificación automática puede ser integrada en sistemas en tiempo real para filtrar contenido y recomendar películas basadas en las opiniones de los usuarios.
+
+---
+
